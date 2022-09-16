@@ -4,6 +4,7 @@ export default function Form() {
     const [name, setName] = useState('');
     const [years, setYear] = useState(0);
     const [city, setCity] = useState('');
+    const [modol, setModol] = useState('');
 
   return (
     <form>
@@ -28,6 +29,37 @@ export default function Form() {
             value={city}
             onChange={ ({ target }) => setCity(target.value)} />
         </fieldset>
+        <fieldset>
+            <legend>Modulo</legend>
+             <label htmlFor='fundament'>Fundamentos</label>
+             <input 
+             type='radio'
+             id='fundament'
+             value='fundament'
+             checked={ modol === 'fundament' }
+            onChange={ ({ target }) => setModol(target.value)} />
+            <label htmlFor='Ciência da Computação'> Front-End</label>
+             <input 
+             type='radio'
+             id='Front-End'
+             value='Front-End'
+             checked={ modol === 'Front-End' }
+            onChange={ ({ target }) => setModol(target.value)} />
+            <label htmlFor='back-end'> Back-End</label>
+             <input 
+             type='radio'
+             id='back-end'
+             value='back-end'
+             checked={ modol === 'back-end' }
+            onChange={ ({ target }) => setModol(target.value)} />
+            <label htmlFor='Ciência da Computação'> Ciência da Computação</label>
+             <input 
+             type='radio'
+             id='Ciência da Computação'
+             value='Ciência da Computação'
+             checked={ modol === 'Ciência da Computação' }
+            onChange={ ({ target }) => setModol(target.value)} />
+            </fieldset>
     </form>
   )
 }
