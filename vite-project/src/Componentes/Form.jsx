@@ -60,6 +60,9 @@ export default function Form() {
              checked={ modol === 'Ciência da Computação' }
             onChange={ ({ target }) => setModol(target.value)} />
             </fieldset>
+
+            <button type='submit'> Enviar </button>
+
     </form>
   )
 }
